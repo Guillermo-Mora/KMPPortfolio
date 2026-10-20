@@ -47,6 +47,8 @@ fun App() {
     Page {
         MainSection {
             //USAR LA FUENTE DE JETBRAINS MONO PARA EL PORTAFOLIO WEB Y VER QUE TAL QUEDA
+            //Añadir sección sólo con las tecnologías, o en vez de eso poner los iconos de las tecnologías debajo de
+            // la imagen de cada proyecto.
             Spacer(modifier = Modifier.height(64.dp))
             Image(
                 painter = painterResource(Res.drawable.guillermo_mora_mortes),
