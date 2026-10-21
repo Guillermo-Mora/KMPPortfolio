@@ -3,11 +3,14 @@ package guillermomora.kmpportfolio.components.section
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.width
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import guillermomora.kmpportfolio.AppColor
 import guillermomora.kmpportfolio.components.SpacerSmall
@@ -34,11 +37,19 @@ fun SectionExperience(
             ) {
                 TextNormal(
                     text = entry.companyName,
-                    fontWeight = FontWeight.Bold
+                    fontWeight = FontWeight.Bold,
+                    modifier = Modifier.weight(2f)
                 )
+                Spacer(modifier = Modifier.width(4.dp))
                 TextNormal(
                     text = entry.dates,
-                    color = AppColor.w2
+                    color = AppColor.w2,
+                    maxLines = 1,
+                    textAlign = TextAlign.End,
+                    modifier = Modifier.weight(
+                        weight = 2f,
+                        fill = false
+                    )
                 )
             }
             TextNormal(
