@@ -14,6 +14,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.unit.dp
 import guillermomora.kmpportfolio.AppColor
+import guillermomora.kmpportfolio.components.SpacerBig
 import guillermomora.kmpportfolio.components.SpacerNormal
 import guillermomora.kmpportfolio.components.TextSection
 import kmpportfolio.shared.generated.resources.Res
@@ -37,7 +38,7 @@ fun SectionProjects(
                 .widthIn(max = 600.dp)
                 .fillMaxWidth()
         ) {
-            SpacerNormal()
+            SpacerBig()
             TextSection(
                 text = title
             )
@@ -53,7 +54,7 @@ fun SectionProjects(
                         .clip(CircleShape)
                 )
             }
-            SpacerNormal()
+            SpacerBig()
         }
     }
 }

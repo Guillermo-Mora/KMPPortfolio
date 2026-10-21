@@ -65,12 +65,12 @@ fun App() {
         EducationEntry(
             degree = "Higher Technician in Multiplatform Application Development",
             dates = "2024 ∙ 2026",
-            averageGrade = " 9 ∙ Highest Honours"
+            averageGrade = "8.94 ∙ Highest Honours"
         ),
         EducationEntry(
             degree = "Technician in Microcomputer Systems and Networks",
             dates = "2022 ∙ 2024",
-            averageGrade = " 9"
+            averageGrade = "8.92"
         ),
     )
     val connectEntries = listOf(
@@ -114,22 +114,22 @@ fun App() {
                 TextNormal(
                     text = "I build full-stack applications focused on creating useful, accessible software for everyone."
                 )
-                SpacerNormal()
+                SpacerBig()
                 SectionExperience(
                     title = "EXPERIENCE",
                     experienceEntries = experienceEntries
                 )
-                SpacerNormal()
+                SpacerBig()
                 SectionEducation(
                     educationEntries = educationEntries,
                     title = "EDUCATION"
                 )
-                SpacerNormal()
+                SpacerBig()
                 SectionConnect(
                     title = "CONNECT",
                     connectEntries = connectEntries,
                 )
-                SpacerNormal()
+                SpacerBig()
             }
             SectionProjects(
                 title = "PROJECTS",
