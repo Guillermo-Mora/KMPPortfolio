@@ -1,34 +1,30 @@
-package guillermomora.kmpportfolio.components
+package guillermomora.kmpportfolio.components.section
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.height
 import androidx.compose.material3.HorizontalDivider
-import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
 import guillermomora.kmpportfolio.AppColor
+import guillermomora.kmpportfolio.components.SpacerSmall
+import guillermomora.kmpportfolio.components.TextNormal
+import guillermomora.kmpportfolio.components.TextSection
 
 @Composable
-fun ExperienceSection(
-    experienceEntries: List<ExperienceEntry>
+fun SectionExperience(
+    experienceEntries: List<ExperienceEntry>,
+    title: String
 ) {
     Column(
         modifier = Modifier
             .fillMaxWidth()
     ) {
-        Text(
-            text = "EXPERIENCE",
-            color = AppColor.w2,
-            lineHeight = 28.sp,
-            fontSize = 12.sp,
-            fontWeight = FontWeight.Bold
+        TextSection(
+            text = title
         )
         experienceEntries.forEachIndexed { index, entry ->
             Row(
@@ -36,29 +32,26 @@ fun ExperienceSection(
                 modifier = Modifier
                     .fillMaxWidth()
             ) {
-                Text(
+                TextNormal(
                     text = entry.companyName,
-                    color = AppColor.w1,
-                    lineHeight = 28.sp
+                    fontWeight = FontWeight.Bold
                 )
-                Text(
+                TextNormal(
                     text = entry.dates,
-                    color = AppColor.w2,
-                    lineHeight = 28.sp
+                    color = AppColor.w2
                 )
             }
-            Text(
+            TextNormal(
                 text = entry.role,
-                color = AppColor.w2,
-                lineHeight = 28.sp
+                color = AppColor.w2
             )
             if (index + 1 < experienceEntries.size) {
-                Spacer(modifier = Modifier.height(12.dp))
+                SpacerSmall()
                 HorizontalDivider(
                     color = AppColor.w2,
                     thickness = 0.5.dp
                 )
-                Spacer(modifier = Modifier.height(12.dp))
+                SpacerSmall()
             }
         }
     }

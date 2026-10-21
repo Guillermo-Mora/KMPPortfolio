@@ -1,4 +1,4 @@
-package guillermomora.kmpportfolio.components
+package guillermomora.kmpportfolio.components.section
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Column
@@ -12,12 +12,12 @@ import androidx.compose.ui.unit.dp
 import guillermomora.kmpportfolio.AppColor
 
 @Composable
-fun MainSection(
+fun SectionProjects(
     content: @Composable () -> Unit
 ) {
     Column(
         modifier = Modifier
-            .background(AppColor.w5)
+            .background(AppColor.w4)
             .fillMaxWidth(),
         horizontalAlignment = Alignment.CenterHorizontally,
     ) {
